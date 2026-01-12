@@ -1,4 +1,4 @@
-package charakters;
+package characters;
 
 public class Oldvillager {
 }
