@@ -1,4 +1,4 @@
-package characters;
+package charactersBOSS;
 
 public class PerryThePlatypus {
 }
