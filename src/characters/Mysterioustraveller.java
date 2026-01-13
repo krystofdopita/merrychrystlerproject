@@ -1,4 +1,4 @@
 package characters;
 
-public class Mysterioustraveller {
+public class Mysterioustraveller extends Character{
 }

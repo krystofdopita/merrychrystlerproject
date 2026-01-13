@@ -1,4 +1,4 @@
 package characters;
 
-public class Oldvillager {
+public class Oldvillager extends Character{
 }

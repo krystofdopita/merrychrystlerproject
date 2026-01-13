@@ -1,4 +1,5 @@
 package characters;
 
-public class Merchant {
+public class Merchant extends Character{
+
 }

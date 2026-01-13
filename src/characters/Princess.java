@@ -1,4 +1,4 @@
 package characters;
 
-public class Princess {
+public class Princess extends Character{
 }
