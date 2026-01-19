@@ -1,0 +1,59 @@
+{
+  "locations": [
+    {"name": "Castle",
+      "description": "Hrad",
+      "west": "Forest",
+      "east": null,
+      "north": null,
+      "south": null,
+      "items": ["lantern"]
+
+    },
+    {
+      "name": "Forest",
+      "description": "Forest - Dense woods full of shadows and unfamiliar sounds.",
+      "west": "OldVillagersHouse",
+      "east": null,
+      "north": null,
+      "south": null,
+      "items": []
+    },
+    {
+      "name": "OldVillagersHouse",
+      "description": "The old villager’s house, who knows the secrets of the surrounding area.",
+      "west": "Obchodnikuvdomecek",
+      "east": "Forest",
+      "north": null,
+      "south": null,
+      "items": ["mapoftheforest"]
+    },
+
+    {
+      "name": "Obchodnikuvdomecek",
+      "description": "The Merchant’s Shop – a small place filled with strange goods and quiet promises.",
+      "west": "Ruin",
+      "east": "OldVillagersHouse",
+      "north": null,
+      "south": null,
+      "items": ["shield"]
+    },
+    {
+      "name": "Ruin",
+      "description": "The Ruins – a lone traveler standing by the road leading to the fortress",
+      "west": "FortPrincess",
+      "east": "Obchodnikuvdomecek",
+      "north": null,
+      "south": null,
+      "items": ["travellersscroll"]
+    },
+    {
+      "name": "FortPrincess",
+      "description": "Princess Fortress: A massive fortress where the final confrontation awaits",
+      "west": null,
+      "east": "Ruin",
+      "north": null,
+      "south": null,
+      "items": []
+    }
+  ]
+}
