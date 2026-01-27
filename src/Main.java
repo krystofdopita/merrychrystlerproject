@@ -5,8 +5,8 @@ import Default.LocationManager;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
 
-    LocationManager lm = LocationManager.loadLocations("resources/map.json");
 
+    System.out.println(LocationManager.getLocations());
     Game.start();
 
 

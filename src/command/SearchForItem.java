@@ -1,9 +1,16 @@
 package command;
 
+import Default.GameInfo;
+import Default.LocationManager;
+
 public class SearchForItem implements Command{
+
     @Override
     public String execute() {
-        return "";
+
+        if (!GameInfo.getCurrentLocation().getItems().isEmpty())
+        return "Items found:"+ GameInfo.getCurrentLocation().getItems();
+        return "Item was not found.";
     }
 
     @Override

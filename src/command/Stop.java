@@ -3,7 +3,7 @@ package command;
 public class Stop implements Command{
     @Override
     public String execute() {
-        return "goodbye";
+        return "Goodbye my little sigma 67";
     }
 
     @Override

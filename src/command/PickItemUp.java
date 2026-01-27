@@ -1,9 +1,23 @@
 package command;
 
+import Default.GameInfo;
+
+import java.util.ArrayList;
+
 public class PickItemUp implements Command{
+
     @Override
     public String execute() {
-        return "";
+
+        if (!GameInfo.getCurrentLocation().getItems().isEmpty()){
+            Inventory.getInventory().add(GameInfo.getCurrentLocation().getItems().get(0));
+            GameInfo.getCurrentLocation().getItems().remove(0);
+
+
+            return "Your inventory looks like this now:"+ Inventory.getInventory();
+        }
+        return "Item was not found.";
+
     }
 
     @Override

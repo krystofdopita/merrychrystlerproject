@@ -12,6 +12,9 @@ public class Location {
     private String north;
     private String south;
     private List<String> items = new ArrayList<>();
+    private int visitCount;
+    private boolean canUseItem;
+    private boolean canSpeakWithNpc;
 
     public Location() {
     }
@@ -72,6 +75,30 @@ public class Location {
         this.items = items;
     }
 
+    public int getVisitCount() {
+        return visitCount;
+    }
+
+    public void setVisitCount(int visitCount) {
+        this.visitCount = visitCount;
+    }
+
+    public boolean isCanUseItem() {
+        return canUseItem;
+    }
+
+    public void setCanUseItem(boolean canUseItem) {
+        this.canUseItem = canUseItem;
+    }
+
+    public boolean isCanSpeakWithNpc() {
+        return canSpeakWithNpc;
+    }
+
+    public void setCanSpeakWithNpc(boolean canSpeakWithNpc) {
+        this.canSpeakWithNpc = canSpeakWithNpc;
+    }
+
     @Override
     public String toString() {
         return "Location{" +
@@ -82,6 +109,9 @@ public class Location {
                 ", north='" + north + '\'' +
                 ", south='" + south + '\'' +
                 ", items=" + items +
+                ", visitCount=" + visitCount +
+                ", canUseItem=" + canUseItem +
+                ", canSpeakWithNpc=" + canSpeakWithNpc +
                 '}';
     }
 }

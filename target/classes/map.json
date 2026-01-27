@@ -6,7 +6,10 @@
       "east": null,
       "north": null,
       "south": null,
-      "items": ["lantern"]
+      "items": ["lantern"],
+      "visitCount": 0,
+      "canUseItem": false,
+      "canSpeakWithNpc": true
 
     },
     {
@@ -16,7 +19,10 @@
       "east": null,
       "north": null,
       "south": null,
-      "items": []
+      "items": [],
+      "visitCount": 0,
+      "canUseItem": false,
+      "canSpeakWithNpc": false
     },
     {
       "name": "OldVillagersHouse",
@@ -25,7 +31,10 @@
       "east": "Forest",
       "north": null,
       "south": null,
-      "items": ["mapoftheforest"]
+      "items": ["mapoftheforest"],
+      "visitCount": 0,
+      "canUseItem": false,
+      "canSpeakWithNpc": true
     },
 
     {
@@ -35,7 +44,10 @@
       "east": "OldVillagersHouse",
       "north": null,
       "south": null,
-      "items": ["shield"]
+      "items": ["shield"],
+      "visitCount": 0,
+      "canUseItem": false,
+      "canSpeakWithNpc": true
     },
     {
       "name": "Ruin",
@@ -44,7 +56,10 @@
       "east": "Obchodnikuvdomecek",
       "north": null,
       "south": null,
-      "items": ["travellersscroll"]
+      "items": ["travellersscroll"],
+      "visitCount": 0,
+      "canUseItem": false,
+      "canSpeakWithNpc": true
     },
     {
       "name": "FortPrincess",
@@ -53,7 +68,10 @@
       "east": "Ruin",
       "north": null,
       "south": null,
-      "items": []
+      "items": [],
+      "visitCount": 0,
+      "canUseItem": true,
+      "canSpeakWithNpc": true
     }
   ]
 }

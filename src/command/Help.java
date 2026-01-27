@@ -1,10 +1,11 @@
 package command;
 
-public class Answer implements Command{
+import Default.Console;
 
+public class Help implements Command{
     @Override
     public String execute() {
-        return "";
+        return Console.getCommands().keySet().toString();
     }
 
     @Override

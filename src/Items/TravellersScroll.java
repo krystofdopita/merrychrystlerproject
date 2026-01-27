@@ -2,10 +2,10 @@ package Items;
 
 public class TravellersScroll {
 
-    private String mapTS = "[ HRAD ]──[ LES ]──[ VESNIČAN ]──[ OBCHODNÍK ]──[ POUTNÍK ]──[ PEVNOST ]";
-    public String getMapTS(){
+    private static final String mapTS = "[ HRAD ]──[ LES ]──[ VESNIČAN ]──[ OBCHODNÍK ]──[ POUTNÍK ]──[ PEVNOST ]";
+    public static String getMapTS(){
     return mapTS;
     }
-    private String id = "travellersscroll";
+    private static String id = "travellersscroll";
 
 }

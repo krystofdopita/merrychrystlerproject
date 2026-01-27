@@ -1,14 +1,12 @@
 package Default;
 
-import command.Command;
-import command.Move;
-import command.Stop;
+import command.*;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class Console {
-    private HashMap<String, Command> commands;
+    private static HashMap<String, Command> commands;
     private boolean isExit;
     private Scanner scanner;
 
@@ -21,6 +19,13 @@ public class Console {
     public void inicialization() {
         commands.put("move", new Move());
         commands.put("exit", new Stop());
+        commands.put("tasks", new Tasks());
+        commands.put("useitem",new UseItem());
+        commands.put("pickitemup",new PickItemUp());
+        commands.put("searchforitem",new SearchForItem());
+        commands.put("speak",new Speak());
+        commands.put("help",new Help());
+
     }
 
     public void execute() {
@@ -39,7 +44,7 @@ public class Console {
         scanner.close();
     }
 
-    public HashMap<String, Command> getCommands() {
+    public static HashMap<String, Command> getCommands() {
         return commands;
     }
 }
