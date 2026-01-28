@@ -12,7 +12,7 @@ public class Move implements Command{
     public String execute() {
         Scanner scanner = new Scanner(System.in);
         if (Inventory.getInventory().isEmpty()){
-            return "You don’t have a lantern, so you can’t move.\n";
+            return "You don’t have a lantern, so you can’t move.";
         }
         System.out.println("Where do you want to go? For example: forward, west, backward, east.");
         System.out.print(">> ");
