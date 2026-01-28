@@ -23,6 +23,7 @@ public class UseItem implements Command{
             }
             case "shield":
                 if (GameInfo.getCurrentLocation().isCanUseItem()&&Inventory.getInventory().contains("shield")) {return "You have just used the shield to keep the door open.";}
+            case "lantern": return "You are already using your lantern.";        
         }
 
 
