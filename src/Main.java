@@ -1,4 +1,5 @@
 import Default.Game;
+import Default.GameInfo;
 import Default.LocationManager;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -6,7 +7,7 @@ import Default.LocationManager;
 void main() {
 
 
-    System.out.println(LocationManager.getLocations());
+
     Game.start();
 
 

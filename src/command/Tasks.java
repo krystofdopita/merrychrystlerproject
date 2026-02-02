@@ -10,22 +10,22 @@ public class Tasks implements Command{
         }
         if(LocationManager.getLocations().get(4).getVisitCount() == 1){
 
-            return "Have you met the traveler in this location?\n" +
+            return "Have you met the traveler in this location?" +
                     "You can talk with him.";
         }
         if (LocationManager.getLocations().get(3).getVisitCount() == 1){
 
-            return "Have you met the merchant in this location?\n" +
+            return "Have you met the merchant in this location?" +
                     "You can talk with him.";
         }
 
         if (LocationManager.getLocations().get(2).getVisitCount() != 1){
-            return "Try to find the villager.\n";
+            return "Try to find the villager and talk with him.";
 
 
         }
     if (LocationManager.getLocations().get(2).getVisitCount() == 1){
-        return "Have you already tried talking to the villager?\n";
+        return "Have you already tried talking to the villager?";
     }
 
 

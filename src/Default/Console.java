@@ -32,7 +32,7 @@ public class Console {
         while (!isExit) {
             System.out.print(">> ");
             String input = scanner.nextLine();
-            String command = input.trim().toLowerCase();
+            String command = input.trim().toLowerCase().replace(" ","");
 
             if (commands.containsKey(command)) {
                 System.out.println(commands.get(command).execute());
