@@ -1,10 +1,13 @@
 package Default;
 
 import locations.Location;
+import java.util.List;
 
 public class GameInfo {
     private static Location CurrentLocation;
     private static String CurrentState;
+    private static List<Location> allLocations;
+    //private static
 
 
     public static Location getCurrentLocation() {
@@ -21,6 +24,14 @@ public class GameInfo {
 
     public static void setCurrentState(String currentState) {
         CurrentState = currentState;
+    }
+
+    public static List<Location> getAllLocations() {
+        return allLocations;
+    }
+
+    public static void setAllLocations(List<Location> allLocations) {
+        GameInfo.allLocations = allLocations;
     }
 
     @Override

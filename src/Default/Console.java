@@ -25,11 +25,14 @@ public class Console {
         commands.put("searchforitem",new SearchForItem());
         commands.put("speak",new Speak());
         commands.put("help",new Help());
+        commands.put("inventory",new Inventory());
 
     }
 
     public void execute() {
         while (!isExit) {
+            System.out.println();
+            System.out.println("What do you want to do?");
             System.out.print(">> ");
             String input = scanner.nextLine();
             String command = input.trim().toLowerCase().replace(" ","");

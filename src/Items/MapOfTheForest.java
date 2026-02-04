@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 public class MapOfTheForest {
- private static String mapMT = "[ HRAD ]──[ LES ]──[ VESNIČAN ]──[ OBCHODNÍK ]";
+ private static String mapMT = "[ CASTLE ]──[ FOREST ]──[ VILLAGER ]──[ MERCHANT ]";
  public static String getMapMT(){
      return mapMT;
  }

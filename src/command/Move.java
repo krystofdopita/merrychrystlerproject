@@ -2,6 +2,7 @@ package command;
 
 import Default.GameInfo;
 import Default.LocationManager;
+import charactersBOSS.PerryThePlatypus;
 import locations.Location;
 
 import java.util.Scanner;
@@ -31,13 +32,34 @@ public class Move implements Command{
                 }
 
                 break;
-            case "backward","","east":
+            case "backward","east":
 
                 for (Location location : LocationManager.getLocations()){
+
                     if (location.getName().equals(GameInfo.getCurrentLocation().getEast())){
                         GameInfo.setCurrentLocation(location);
                         GameInfo.getCurrentLocation().setVisitCount(GameInfo.getCurrentLocation().getVisitCount()+1);
-                        return "You just moved to "+ GameInfo.getCurrentLocation().getDescription() + GameInfo.getCurrentLocation().getVisitCount();
+                        if (GameInfo.getCurrentLocation().getName().equalsIgnoreCase("Forest")&&Inventory.getInventory().contains("dagger")&&!Inventory.getInventory().contains("heart")){
+                            System.out.println("You just moved to "+ GameInfo.getCurrentLocation().getDescription());
+                            PerryThePlatypus.fightwithperry();
+                            return "You won the fight";
+                        }
+                        if (Inventory.getInventory().contains("key")&&GameInfo.getCurrentLocation().getName().equalsIgnoreCase("Castle")){
+                            try {
+
+                                System.out.println("You reach the Castle Courtyard. At the far end, a sturdy locked gate awaits.");
+                                Thread.sleep(1500);
+                                return "";
+
+
+
+                            } catch (InterruptedException e) {
+                                throw new RuntimeException(e);
+                            }
+
+
+                        }
+                        return "You just moved to "+ GameInfo.getCurrentLocation().getDescription();
                     }
 
                 }

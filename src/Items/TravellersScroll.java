@@ -2,7 +2,7 @@ package Items;
 
 public class TravellersScroll {
 
-    private static final String mapTS = "[ HRAD ]──[ LES ]──[ VESNIČAN ]──[ OBCHODNÍK ]──[ POUTNÍK ]──[ PEVNOST ]";
+    private static final String mapTS = "[ CASTLE ]──[ FOREST ]──[ VILLAGER ]──[ MERCHANT ]──[ RUIN ]──[ FORTRESS ]";
     public static String getMapTS(){
     return mapTS;
     }

@@ -1,39 +1,48 @@
 package command;
 
+import Default.GameInfo;
 import Default.LocationManager;
 
 public class Tasks implements Command{
     @Override
     public String execute() {
-        if (LocationManager.getLocations().get(5).getVisitCount() == 1){
+        if (!Inventory.getInventory().contains("mapoftheforest")){return "Type speak, to talk with the king.";}
+        if (!Inventory.getInventory().contains("lantern")){return"Type pickitemup, to pick up the lantern.";}
+
+        if (Inventory.getInventory().contains("travellersscroll")){
             return "Find the princess.";
         }
-        if(LocationManager.getLocations().get(4).getVisitCount() == 1){
-
-            return "Have you met the traveler in this location?" +
-                    "You can talk with him.";
+        if (GameInfo.getCurrentLocation().getName().equalsIgnoreCase("Castle")&&!Inventory.getInventory().contains("key")){
+            return "Use the key to unlock the chamber.";
         }
-        if (LocationManager.getLocations().get(3).getVisitCount() == 1){
-
-            return "Have you met the merchant in this location?" +
-                    "You can talk with him.";
+        if (Inventory.getInventory().contains("key")){
+            return "Find the chamber in the castle.";
         }
-
-        if (LocationManager.getLocations().get(2).getVisitCount() != 1){
-            return "Try to find the villager and talk with him.";
-
-
+        if (Inventory.getInventory().contains("shield")&&!Inventory.getInventory().contains("travellersscroll")){
+            return "Have you met the Traveller?" + "You can talk with him.";
         }
-    if (LocationManager.getLocations().get(2).getVisitCount() == 1){
-        return "Have you already tried talking to the villager?";
-    }
+        if (!Inventory.getInventory().contains("shield")&&Inventory.getInventory().contains("dagger")){
+            return "Have you met the merchant? " + "You can talk with him.";
+        }
+        if (Inventory.getInventory().contains("herbs")){
+            return "Speak with the villager and hand him the herbs.";
+        }
+        if (Inventory.getInventory().contains("mapoftheforest")){
+            return "Try to find the villager. "+ "Type move and go to the villager.";
+        }
+        return "Find the villager";
 
 
 
 
 
 
-        return "";
+
+
+
+
+
+
     }
 
     @Override

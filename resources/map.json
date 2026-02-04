@@ -1,7 +1,7 @@
 {
   "locations": [
     {"name": "Castle",
-      "description": "Hrad",
+      "description": "An ancient castle stands before you, silent and unsettling.",
       "west": "Forest",
       "east": null,
       "north": null,
@@ -16,12 +16,12 @@
       "name": "Forest",
       "description": "Forest - Dense woods full of shadows and unfamiliar sounds.",
       "west": "OldVillagersHouse",
-      "east": null,
+      "east": "Castle",
       "north": null,
       "south": null,
-      "items": [],
+      "items": ["herbs"],
       "visitCount": 0,
-      "canUseItem": false,
+      "canUseItem": true,
       "canSpeakWithNpc": false
     },
     {

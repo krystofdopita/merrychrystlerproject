@@ -1,13 +1,17 @@
 package Default;
 
+
+
 public class Game {
 
     public static void start(){
         Console console = new Console();
         LocationManager lm = LocationManager.loadLocations("resources/map.json");
+        GameInfo.setAllLocations(LocationManager.getLocations());
         console.inicialization();
-        GameInfo.setCurrentLocation(LocationManager.loadLocations("resources/map.json").getLocations().get(0));
-        System.out.println("Welcome, adventurer! You can type move to explore the world,type exit to leave the game or type help if you need some help.");
+        GameInfo.setCurrentLocation(LocationManager.getLocations().getFirst());
+        System.out.println("Welcome, adventurer! Type tasks to display objectives.");
+
 
 
         console.execute();

@@ -17,7 +17,7 @@ public class Inventory implements Command{
 
     @Override
     public String execute() {
-        return "";
+        return Inventory.getInventory().toString();
     }
 
     @Override
