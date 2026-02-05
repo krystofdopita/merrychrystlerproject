@@ -1,5 +1,7 @@
 package command;
 
+import Default.Console;
+import Default.Game;
 import Default.GameInfo;
 import Default.LocationManager;
 import Items.MapOfTheForest;
@@ -29,6 +31,80 @@ public class UseItem implements Command{
                     return "You have just used the shield to keep the door open.";}
                 return "Shield was not found or you can not use it now.";
             case "key":
+                if (GameInfo.getCurrentLocation().getName().equalsIgnoreCase("FortPrincess")){
+
+                    System.out.println("The seal fades.");
+                    Game.jednaapul();
+                    System.out.println("The princess steps forward.");
+                    Game.jednaapul();
+
+                    System.out.println();
+                    System.out.println("\"The king erased your memory.\"");
+                    Game.jednaapul();
+
+                    System.out.println();
+                    System.out.println("\"That is why you came without fear.\"");                    Game.jednaapul();
+
+                    System.out.println("\"Without questions.\"");
+                    Game.jednaapul();
+
+                    System.out.println();
+                    System.out.println("\"You were never meant to remember this tower.\"");                    Game.jednaapul();
+
+                    System.out.println("\"Or me.\"");
+                    Game.jednaapul();
+
+                    System.out.println();
+                    System.out.println("\"When we leave, he will try to erase you again.\"");                    Game.jednaapul();
+
+                    System.out.println("\"But not fast enough.\"");                    Game.jednaapul();
+
+
+                    System.out.println();
+                    System.out.println("\"The truth does not need your memory.\"");                    Game.jednaapul();
+
+                    System.out.println("\"It only needs you to bring me back.\"");                    Game.jednaapul();
+
+
+                    System.out.println();
+                    System.out.println("She turns toward the exit.");                    Game.jednaapul();
+
+                    System.out.println("You follow her.");                    Game.jednaapul();
+                    if (Inventory.getInventory().contains("heart")){
+                        System.out.println("You have a choice:");
+                        System.out.println("1: You give her the heart. ");
+                        System.out.println("2: You do not give her the heart.");
+                        input = sc.nextLine().toLowerCase().trim();
+                        if (input.equals("1")){
+                            System.out.println("Princess: Wow you gave me your heart.");Game.jednaapul();
+                            System.out.println("Princess: You are the real SIGMA i have been waiting for.");Game.dvaapul();
+                            if (Inventory.getInventory().contains("perryschild")){
+                                System.out.println("Princess: And we even have a baby.");
+                                Game.dvaapul();
+                                Game.dvaapul();
+                                Game.dvaapul();
+
+
+                            }
+                        }
+
+                    }
+                        System.out.println();
+                        System.out.println();
+                        System.out.println();
+                        System.out.println();
+                        System.out.println();
+                        System.out.println();
+
+                        System.out.println("YOU WON");
+                        Game.dvaapul();
+                    System.exit(67);
+
+
+
+
+
+                }
                 if (GameInfo.getCurrentLocation().getName().equalsIgnoreCase("castle")&&Inventory.getInventory().contains("key")){
 
 
@@ -57,7 +133,7 @@ public class UseItem implements Command{
                                 lockOpened = true;
                                 Inventory.getInventory().remove("key");
                                 Inventory.getInventory().add("travellersscroll");
-                                System.out.println("Your inventory looks like this now: "+ Inventory.getInventory());
+
 
                             } else {
                                 System.out.println("The lock rattles violently.");
@@ -112,6 +188,7 @@ public class UseItem implements Command{
                     }
                     System.out.println("The gate opens.");
                     System.out.println("Behind it, you find the Travellers Scroll.");
+                    System.out.println("Your inventory looks like this now: "+ Inventory.getInventory());
 
 
                     return "";

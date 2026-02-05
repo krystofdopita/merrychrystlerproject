@@ -114,6 +114,7 @@ public class PerryThePlatypus {
                 Inventory.getInventory().add("heart");
                 System.out.println("Your inventory looks like this now:"+ Inventory.getInventory());
                 GameInfo.setCurrentLocation(LocationManager.getLocations().get(1));
+
                 try {
                     Thread.sleep(4000);
                 } catch (InterruptedException e) {
@@ -144,7 +145,7 @@ public class PerryThePlatypus {
 
             if (playerHP <= 0) {
                 System.out.println("You fall. Game over.");
-                System.exit(Integer.parseInt("Your bitch ass died"));
+                System.exit(67);
 
             }
         }
