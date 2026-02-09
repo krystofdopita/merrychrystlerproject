@@ -4,7 +4,7 @@ import Default.GameInfo;
 import Default.LocationManager;
 
 public class SearchForItem implements Command{
-
+//executes the logic for searching for items in different locations
     @Override
     public String execute() {
 

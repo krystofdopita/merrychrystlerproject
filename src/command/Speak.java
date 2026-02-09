@@ -6,7 +6,7 @@ import characters.Princess;
 
 import java.util.Random;
 import java.util.Scanner;
-
+//this class controls speaking with the characters
 public class Speak implements Command{
 
     @Override
@@ -104,6 +104,7 @@ public class Speak implements Command{
                     return "";
                 case "OldVillagersHouse":
                     System.out.println("You are talking with the Villager:");Game.jednaapul();
+                    //speaking with the villager if you dont have the herbs
                     if (Inventory.getInventory().contains("mapoftheforest")&&!Inventory.getInventory().contains("herbs")) {
                         System.out.println("(You approach an old villager sitting by the ruins of a house.)");Game.dvaapul();
                         System.out.println("Villager: Ah… I knew someone would come. Someone who can still change what is coming.");Game.dvaapul();
@@ -136,6 +137,7 @@ public class Speak implements Command{
                         }
 
                     }
+                    //speaking with the villager if you have the herbs
                     if (GameInfo.getCurrentLocation().getVisitCount() >= 2&&Inventory.getInventory().contains("herbs")) {
 
                         System.out.println("Villager: Have you found the herbs?");Game.dvaapul();
@@ -164,14 +166,16 @@ public class Speak implements Command{
                     }
 
                     return "";
+                    //speaking with the merchant
+                    //you can have two different talks
                     case "Obchodnikuvdomecek":
 
                     System.out.println("You are talking with the Merchant");
                         Random rand = new Random();
-                        int version = rand.nextInt(2); // 0 nebo 1
+                        int version = rand.nextInt(2);
 
                         if(version == 0) {
-                            // Verze 1 – klidná, znepokojivá
+
                             System.out.println("You are late. Or you are early. You used to argue about the time, and now you do not even notice it.");Game.dvaapul();
                             System.out.println("The funny thing is that you stand in the same way every time. It is as if you are waiting for something to remember you first. Perhaps you do, perhaps you do not.");Game.dvaapul();Game.dvaapul();
                             System.out.println("People tend to forget places. You tend to forget yourself. And yet, here you are, standing in front of me again.");Game.dvaapul();
@@ -184,7 +188,7 @@ public class Speak implements Command{
                             System.out.println("Remember, not everything that seems familiar is safe. And not everything that is safe seems familiar.");Game.dvaapul();
                             System.out.println("You can find the traveller if you go the same way you came here with.");
                         } else {
-                            // Verze 3 – unavená, temná, skoro lítost
+
                             System.out.println("I remember you. That is the problem.");Game.jednaapul();
                             System.out.println("You came here with purpose once. Now you just come.");Game.dvaapul();
                             System.out.println("I thought it was fear. Then I thought it was courage.");Game.dvaapul();
@@ -245,9 +249,6 @@ public class Speak implements Command{
                     return "";
                 case "FortPrincess":
                     System.out.println("You are talking with the Princess");
-
-
-
                     return "";
 
 

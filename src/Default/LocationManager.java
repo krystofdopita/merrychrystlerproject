@@ -6,7 +6,7 @@ import locations.Location;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.LinkedList;
-
+//loads locations from json file
 public class LocationManager {
     private final static ObjectMapper objectMapper = new ObjectMapper();
     private static LinkedList<Location> locations;

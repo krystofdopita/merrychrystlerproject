@@ -8,7 +8,7 @@ public class PickItemUp implements Command{
 
     @Override
     public String execute() {
-
+//executes the logic for picking item up from different locations
         if (!GameInfo.getCurrentLocation().getItems().isEmpty()){
             Inventory.getInventory().add(GameInfo.getCurrentLocation().getItems().get(0));
             GameInfo.getCurrentLocation().getItems().remove(0);

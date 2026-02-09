@@ -1,15 +1,15 @@
 package command;
 
-import Default.Console;
+
 import Default.Game;
 import Default.GameInfo;
-import Default.LocationManager;
+
 import Items.MapOfTheForest;
 import Items.TravellersScroll;
 
 import java.util.Random;
 import java.util.Scanner;
-
+//this class is for using items
 public class UseItem implements Command{
     @Override
     public String execute() {
@@ -17,6 +17,7 @@ public class UseItem implements Command{
         System.out.println(Inventory.getInventory());
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine().toLowerCase().trim().replace(" ","");
+        //handles the inputs
         switch (input){
             case "mapoftheforest":
                 if (Inventory.getInventory().contains("mapoftheforest")) {
@@ -30,7 +31,9 @@ public class UseItem implements Command{
                 if (GameInfo.getCurrentLocation().isCanUseItem()&&Inventory.getInventory().contains("shield")) {
                     return "You have just used the shield to keep the door open.";}
                 return "Shield was not found or you can not use it now.";
+
             case "key":
+                //handles the final scene with the princess
                 if (GameInfo.getCurrentLocation().getName().equalsIgnoreCase("FortPrincess")){
 
                     System.out.println("The seal fades.");
@@ -105,6 +108,7 @@ public class UseItem implements Command{
 
 
                 }
+                //handles the castle puzzle mission
                 if (GameInfo.getCurrentLocation().getName().equalsIgnoreCase("castle")&&Inventory.getInventory().contains("key")){
 
 

@@ -2,7 +2,7 @@ package command;
 
 import Default.GameInfo;
 import Default.LocationManager;
-
+//this class helps the player in the game by telling him what to do
 public class Tasks implements Command{
     @Override
     public String execute() {

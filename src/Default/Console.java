@@ -4,7 +4,10 @@ import command.*;
 
 import java.util.HashMap;
 import java.util.Scanner;
-
+/**
+ * This class handles all the player's input.
+ * It's like the main brain that decides what to do when the player types something.
+ */
 public class Console {
     private static HashMap<String, Command> commands;
     private boolean isExit;
@@ -28,7 +31,7 @@ public class Console {
         commands.put("inventory",new Inventory());
 
     }
-
+//executing input
     public void execute() {
         while (!isExit) {
             System.out.println();
@@ -46,7 +49,7 @@ public class Console {
         }
         scanner.close();
     }
-
+//getter for commands
     public static HashMap<String, Command> getCommands() {
         return commands;
     }

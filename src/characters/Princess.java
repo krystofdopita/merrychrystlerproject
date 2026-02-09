@@ -1,13 +1,12 @@
 package characters;
 
 import Default.Game;
-import Default.GameInfo;
 import command.Inventory;
 
 import java.util.Scanner;
 
-public class Princess extends Character{
-
+public class Princess {
+//turns on the last mission
     public static void vez() {
         Scanner scanner = new Scanner(System.in);
 
@@ -35,7 +34,8 @@ public class Princess extends Character{
                 }
             }
 
-        } else if (path.equalsIgnoreCase("right")) {
+        }
+        else if (path.equalsIgnoreCase("right")) {
             System.out.println("You chose the right path.");
             System.out.println("The room contains an old labyrinth with sliding blocks. Solve it to unlock the door to the next floor.");
             while (!floor1MechanismActivated) {

@@ -5,9 +5,9 @@ import java.util.List;
 
 public class GameInfo {
     private static Location CurrentLocation;
-    private static String CurrentState;
+
     private static List<Location> allLocations;
-    //private static
+
 
 
     public static Location getCurrentLocation() {
@@ -18,13 +18,9 @@ public class GameInfo {
         CurrentLocation = currentLocation;
     }
 
-    public static String getCurrentState() {
-        return CurrentState;
-    }
 
-    public static void setCurrentState(String currentState) {
-        CurrentState = currentState;
-    }
+
+
 
     public static List<Location> getAllLocations() {
         return allLocations;
@@ -38,7 +34,6 @@ public class GameInfo {
     public String toString() {
         return "Default.GameInfo{" +
                 "CurrentLocation='" + CurrentLocation + '\'' +
-                ", CurrentState='" + CurrentState + '\'' +
                 '}';
     }
 }

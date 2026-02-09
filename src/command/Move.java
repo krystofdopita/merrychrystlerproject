@@ -8,7 +8,7 @@ import charactersBOSS.PerryThePlatypus;
 import locations.Location;
 
 import java.util.Scanner;
-
+//this class controls movement and some cutscenes and missions
 public class Move implements Command{
 
     @Override
@@ -28,10 +28,12 @@ public class Move implements Command{
                     if (location.getName().equals(GameInfo.getCurrentLocation().getWest())){
                         GameInfo.setCurrentLocation(location);
                         GameInfo.getCurrentLocation().setVisitCount(GameInfo.getCurrentLocation().getVisitCount()+1);
+                        //it turns on the mission to find the princess
                         if (GameInfo.getCurrentLocation().getName().equalsIgnoreCase("FortPrincess")){
                             Princess.vez();
                             return "";
                         }
+                        //secret cutscene
                         if (Inventory.getInventory().contains("heart")&&GameInfo.getCurrentLocation().getName().equalsIgnoreCase("Ruin")&&!Inventory.getInventory().contains("perryschild")){
                             System.out.println("You step toward the ruins, the stone path cracking under your feet.");
                             Game.dvaapul();
@@ -84,7 +86,7 @@ public class Move implements Command{
                             System.out.println("");
                             System.out.print("Type your choice: ");
 
-                           input = scanner.nextLine().trim();
+                            input = scanner.nextLine().trim();
                             System.out.println("");
 
                             if (input.equals("1")) {
@@ -134,12 +136,13 @@ public class Move implements Command{
                     if (location.getName().equals(GameInfo.getCurrentLocation().getEast())){
                         GameInfo.setCurrentLocation(location);
                         GameInfo.getCurrentLocation().setVisitCount(GameInfo.getCurrentLocation().getVisitCount()+1);
-
-                        if (GameInfo.getCurrentLocation().getName().equalsIgnoreCase("Forest")&&Inventory.getInventory().contains("dagger")&&!Inventory.getInventory().contains("heart")&&!Inventory.getInventory().equals("shield")){
+//secret cutscene with perry
+                        if (GameInfo.getCurrentLocation().getName().equalsIgnoreCase("Forest")&&Inventory.getInventory().contains("dagger")&&!Inventory.getInventory().contains("heart")&&!Inventory.getInventory().contains("shield")){
                             System.out.println("You just moved to "+ GameInfo.getCurrentLocation().getDescription());
                             PerryThePlatypus.fightwithperry();
                             return "You won the fight";
                         }
+                        //mission with the lock
                         if (Inventory.getInventory().contains("key")&&GameInfo.getCurrentLocation().getName().equalsIgnoreCase("Castle")){
                             try {
 
