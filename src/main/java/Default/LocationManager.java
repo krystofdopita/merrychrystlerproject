@@ -4,7 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import locations.Location;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.LinkedList;
 //loads locations from json file
 public class LocationManager {
@@ -15,17 +17,22 @@ public class LocationManager {
     }
 
     public static LocationManager loadLocations(String jsonPath) {
-
-        try {
-
-            final InputStream is = new FileInputStream(jsonPath);
-
-            return objectMapper.readValue(is, LocationManager.class);
-
-        } catch (Exception e) {
-            System.err.println(jsonPath);
-            throw new RuntimeException(e);
+        ObjectMapper parser = new ObjectMapper();
+        InputStream input = LocationManager.class.getResourceAsStream(jsonPath);
+        if(input == null) {
+            throw new RuntimeException("Unable to load the game");
         }
+
+        try(input){
+           return  parser.readValue(input, LocationManager.class);
+            /*System.out.println(roomManager.toString());*/
+
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found: " + e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public static LinkedList<Location> getLocations() {
